@@ -1,0 +1,92 @@
+$font-main: "CirceRegular", "Arial", sans-serif;
+$font-title: "CormorantGaramondRegular", "Arial", serif;
+
+$width-tablet: 768px;
+$width-desktop: 1300px;
+$width-mobile-only: 767px;
+
+.user-menu {
+  display: flex;
+  justify-content: flex-end;
+  min-width: 53px;
+  padding-top: 22px;
+  
+  @media (max-width: 899px) {
+    order: 2;
+  }
+  
+  @media (min-width: $width-tablet) {
+    min-width: 122px;
+  }
+  
+  @media (min-width: 900px) {
+    margin-left: 15px;
+  }  
+}
+
+.user-menu__item {
+  width: 24px;
+  position: relative;
+  height: max-content;
+  
+  &:focus-within {
+    outline: auto;
+  }
+  
+  & + .user-menu__item {
+    margin-left: 14px;
+  }
+  
+  @media (min-width: $width-tablet) {
+    width: 25px;
+  }
+}
+
+.user-menu__link {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  font-size: 0;
+  padding-top: 13px;
+  transition: .3s;
+
+  &:hover {
+    & .user-menu__profile-image {
+      opacity: .7;
+    }    
+  }
+}
+
+.user-menu__profile-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all .3s;
+}
+
+.basket__counter-wrapper {
+  position: absolute;
+  top: -3px;
+  right: -12px;
+  cursor: pointer;
+  min-width: 17px;
+  height: 17px;
+  background-color: #d62240;
+  color: #fff;
+  border-radius: 30px;
+  text-align: center;
+  line-height: 20px;
+  font-family: "CirceBold", "Arial", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  margin: 0px 3px;
+  z-index: 25;
+
+  @media (min-width: $width-tablet) {
+    top: -5px;
+    min-width: 21px;
+    height: 21px;
+    line-height: 23px;
+    font-size: 12px;
+  }
+}

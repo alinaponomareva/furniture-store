@@ -1,0 +1,224 @@
+$width-tablet: 768px;
+$width-desktop: 1300px;
+$width-mobile-only: 767px;
+
+$color-accent: #ffa38c;
+
+.question-popup {
+  position: fixed;
+  width: 265px;
+  height: 370px;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 80;
+  bottom: 99px;
+  right: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .8s;
+  background-color: #fff;
+  box-shadow: 0 3px 15px 0 rgba(26, 26, 26, 0.12);
+  border-radius: 2px;
+  
+  &--active{
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  @media (min-width: 420px) {
+    width: 300px;
+    bottom: 30px;
+    right: 90px;
+  }
+
+
+  @media (min-width: 640px) {
+    width: 400px;
+  }
+
+  @media (min-width: 885px) {
+    width: 460px;
+  }
+}
+.question-popup__header {
+  height: 62px;
+  background-color: $color-accent;
+  padding: 10px 15px;
+}
+
+.question-popup__header-title {
+  margin-top: 12px;
+  color: #fff;
+  font-family: "CirceRegular";
+}
+
+.question-popup__body {
+  min-height: 262px;
+  display: flex;
+  padding: 15px;
+}
+
+.question-popup__consultant-text {
+  padding: 8px 16px;
+  background-color: $color-accent;
+  display: inline-block;
+  border-radius: 2px 8px 8px 8px;
+  max-width: 450px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -7px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid $color-accent;
+    border-left: 8px solid transparent;
+  }
+}
+
+.question-popup__close {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+  right: 15px;
+  top: 16px;
+  transition: .3s;
+  cursor: pointer;
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    right: 14px;
+    top: 8px;
+    height: 15px;
+    width: 2px;
+    background-color: $color-accent;
+    background-size: cover;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.question-popup__title {
+  font-size: 36px;
+  margin: 0 0 20px 0;
+}
+
+.question-popup__footer {
+  border-top: 1px solid rgba(0, 0, 0, .08);
+  padding: 10px 15px;
+}
+
+.question-popup__form-inputs {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.question-popup__message-text {
+  color: inherit;
+  font-family: inherit;
+  margin: 0;
+  min-height: 24px;
+  height: 1.5em;
+  max-height: 130px;
+  flex-grow: 1;
+  min-width: 150px;
+  overflow: hidden;
+  font-size: 15px;
+  line-height: 20px;
+  outline: none;
+  word-wrap: break-word;
+  border: none;
+  resize: none;
+  box-shadow: none;
+  padding: 0 15px 0 0;
+  width: auto;
+  overflow-wrap: break-word;
+}
+
+.question-popup__form-buttons {
+  position: relative;
+}
+
+.question-popup__attach-button {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.question-popup__attach-label {
+  height: 20px;
+  width: 20px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  background-image: url(../img/icon-clip.svg);
+  background-size: cover;
+  margin-right: 35px;
+
+    
+  @media (min-width: $width-desktop) {
+    margin-right: 28px;
+  }
+}
+
+.question-popup__button-send {
+  padding: 0;
+  border: none;
+  display: inline-block;
+  font: inherit;
+  font-size: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  color: inherit;
+  background-color: transparent;
+  background-image: url(../img/icon-arrowsend.svg);
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.files__counter-wrapper {
+  position: absolute;
+  top: -5px;
+  right: 27px;
+  cursor: pointer;
+  min-width: 14px;
+  height: 14px;
+  background-color: #d62240;
+  color: #fff;
+  border-radius: 30px;
+  text-align: center;
+  font-family: "CirceBold", "Arial", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  margin: 0px 3px;
+  z-index: 25;
+  line-height: 17px;
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}

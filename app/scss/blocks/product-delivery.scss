@@ -1,0 +1,129 @@
+$font-title: "CormorantGaramondRegular", "Arial", serif;
+$color-accent: #ffa38c;
+
+$width-tablet: 768px;
+$width-desktop: 1300px;
+$width-mobile-only: 767px;
+
+.product-delivery {
+  margin-top: 10px;
+}
+
+.product-delivery__form {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  
+  @media (min-width: 720px) {
+    flex-direction: row;
+  } 
+
+  @media (min-width: $width-desktop) {
+    justify-content: center;
+  }
+}
+
+.product-delivery__list {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  
+  @media (min-width: 720px) {
+    flex-direction: row;
+  } 
+  
+  @media (max-width: 1299px) {
+    flex-grow: 1;
+  } 
+}
+
+.product-delivery__item {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  margin-bottom: 15px;
+
+  & + .product-delivery__item {
+    @media (min-width: 720px) {
+      margin-left: 25px;
+    } 
+  }
+
+  @media (min-width: 720px) {
+    margin-bottom: 0;
+  } 
+}
+
+.product-delivery__title {
+  display: block;
+  order: 1;
+  font-size: 22px;
+  font-family: $font-title;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+
+  @media (min-width: 720px) {
+    text-align: left;
+  } 
+}
+
+.product-delivery__input {
+  height: 65px;
+  padding: 10px 15px;
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 3px;
+  transition: all .3s;
+  font-size: 15px;
+
+  &:focus::-webkit-input-placeholder {
+    color: transparent; 
+  }
+
+  @media (min-width: 720px) {
+    font-size: 16px;
+  }
+
+  @media (min-width: $width-desktop) {
+    width: 450px;
+  }
+}
+
+.product-delivery__map {
+  width: 140px;
+  order: -1;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  display: inline-block;
+}
+
+.product-delivery__price {
+  margin: 0 auto;
+  height: 55px;
+  color: #ffffff;
+  display: block;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: $color-accent;
+  border: 1px solid $color-accent;
+  border-radius: 2px;
+  padding: 18px 20px;
+  transition: .3s;
+  font-family: "CirceLight", "Arial", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  align-self: flex-end;
+
+  &:hover {
+    background-color: darken($color-accent, 10%);
+    border-color: darken($color-accent, 10%);
+  }
+
+  @media (min-width: 720px) {
+    margin: 0 25px;
+    height: 65px;
+    padding: 22px 20px;
+  } 
+}

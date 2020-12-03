@@ -1,0 +1,37 @@
+.product-details__title {
+  font-size: 28px;
+  margin: 27px 0 32px;
+  text-align: center;
+}
+
+.product-details__inner-title {
+  font-size: 22px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.product-details__description {
+  @media (min-width: 1160px) {
+    margin-right: 70px;
+  }
+}
+
+.product-details__description-text {
+  width: 100%;
+  
+  @media (min-width: 1160px) {
+    width: 580px;
+  }
+}
+
+.product-details__materials-text {
+  width: 100%;
+
+  @media (min-width: 1160px) {
+    width: 580px;
+  }
+}
+
+.product-details__sizes-wrapper {
+  margin-bottom: 15px;
+}

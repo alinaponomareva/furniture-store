@@ -1,0 +1,144 @@
+$font-main: "CirceLight", "Arial", sans-serif;
+$font-title: "CormorantGaramondRegular", "Arial", serif;
+
+$width-tablet: 768px;
+$width-desktop: 1300px;
+$width-mobile-only: 767px;
+
+.advantages {
+  width: 100%;
+  margin-bottom: 25px;
+  min-height: 200px;
+  
+  @media (min-width: 1200px) {
+    margin-bottom: 10px;
+  }
+}
+
+.advantages__list {
+  padding: 0 0 10px 0;
+  width: 270px;
+  margin: 0 auto;
+  
+  & .slick-track {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    background-color: #ffffff;
+
+    @media (min-width: 1100px) {
+      justify-content: start;
+    }
+  }
+  
+  @media (min-width: 600px) {
+    width: 400px;
+  }
+
+  @media (min-width: $width-tablet) {
+    margin: 0 auto;
+    width: 620px;
+  }
+  
+  @media (min-width: 1200px) {
+    width: 100%;
+    margin: 0;
+  }  
+}
+
+.advantages__item {
+  width: 230px !important;
+  min-height: 200px;
+  margin: 0 auto 20px;
+
+  @media (min-width: 700px) {
+    width: 300px !important;
+  }
+
+  @media (min-width: 768px) {
+    margin: 0 10px 20px 0;
+  }
+}
+
+.advantages__item-description {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 70px;
+    height: 70px;
+    background-color: #ffffff;
+    left: 5em;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    
+    @media (min-width: 700px) {
+      width: 75px;
+      height: 75px;
+      left: 6.7em;
+    }
+  }
+
+  &--1 {
+    &::before {
+      background-image: url("../img/icon-discount.svg");
+    }
+  }
+
+  &--2 {
+    &::before {
+      background-image: url("../img/icon-delivery.svg");
+    }
+  }
+  &--3 {
+    &::before {
+      background-image: url("../img/icon-phone2.svg");
+    }
+  }
+
+  &--4 {
+    &::before {
+      background-image: url("../img/icon-refund.svg");
+    }
+  }
+}
+
+.advantages__item-title {
+  text-align: center;
+  padding-top: 65px;
+  font-size: 19px;
+  min-height: 111px;
+  max-width: 250px;
+  margin: 15px auto 5px;
+  
+  @media (min-width: 700px) {
+    font-size: 22px;
+    margin-bottom: 10px;
+    padding-top: 75px;
+    min-height: 127px;
+  }
+
+  @media (min-width: 740px) {
+    max-width: 100%;
+  }
+}
+
+.advantages__item-text {
+  display: block;
+  width: 215px;
+  text-align: center;
+  font-size: 14px;
+  font-family: "CirceRegular", "Arial", sans-serif;
+  margin: auto auto 0;
+
+  @media (min-width: 700px) {
+    width: 275px;
+    font-size: 15px;
+  }
+}

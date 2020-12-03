@@ -1,0 +1,18 @@
+.about-us__item {
+  padding-bottom: 25px;
+
+  @media (min-width: 601px) {
+    display: block;
+    padding-bottom: 10px;
+  }
+}
+
+.about-us__item-link {
+  color: #ffffff;
+  transition: .5s;
+  font-size: 16px;
+
+  &:hover {
+    color: #909090;
+  }
+}
